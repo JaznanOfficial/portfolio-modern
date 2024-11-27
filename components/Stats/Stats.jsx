@@ -2,19 +2,19 @@ import StatsItem from "./StatsItem";
 
 const statsData = [
   {
-    endCountNum: 10,
+    endCountNum: 3,
     endCountText: "+",
     text: "Yrs. of Experience",
   },
   {
-    endCountNum: 100,
+    endCountNum: 11,
     endCountText: "+",
-    text: "Websites Built",
+    text: "Software Built",
   },
   {
-    endCountNum: 95,
+    endCountNum: 100,
     endCountText: "%",
-    text: "Clients Statisfied",
+    text: "Client's Satisfaction",
   },
 ];
 

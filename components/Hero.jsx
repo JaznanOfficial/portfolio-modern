@@ -10,16 +10,22 @@ import Stats from "./Stats/Stats";
 
 const Hero = () => {
   return (
-    <section className="h-[800px] relative bg-accent/10 xl:bg-white" id="home">
+    <section
+      className="h-[500px] lg:h-[800px]  bg-accent/10 xl:bg-white"
+      id="home"
+    >
       {/* header */}
-      <Header />
+      {/* <Header /> */}
       <div className="container mx-auto h-full">
         <div className="relative z-20 h-full w-full xl:max-w-[768px] flex flex-col items-center xl:items-start justify-center text-center xl:text-left pt-10">
+          <p className="lead max-w-[476px] mb-1">
+            Founder, Developer, and Entrepreneur~
+          </p>
           <h1 className="h1 mb-2 max-w-[320px] xl:max-w-none">
             <span className="text-accent">I Build And</span> Design Powerful
             <TypeAnimation
               preRenderFirstString={true}
-              sequence={["Websites", 2000, "Apps", 2000]}
+              sequence={["Websites", 2000, "Apps", 2000, "SAAS", 2000]}
               speed={50}
               repeat={Infinity}
               wrapper="span"
@@ -41,7 +47,7 @@ const Hero = () => {
         <div className="hidden xl:flex w-[55vw] h-[800px] absolute top-0 right-0 bg-accent">
           <div className="absolute w-[558px] h-[642px] bottom-0 z-40 left-[6.5vw]">
             <Image
-              src="/assets/hero/dev.png"
+              src="/assets/hero/own.png"
               fill
               quality="100"
               priority

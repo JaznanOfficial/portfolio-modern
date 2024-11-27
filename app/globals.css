@@ -5,6 +5,30 @@
 @layer base {
   body {
     @apply font-secondary text-base text-secondary;
+
+    scroll-behavior: smooth !important;
+
+    /* General scrollbar styles */
+    &::-webkit-scrollbar {
+      width: 5px !important; /* Width for vertical scrollbar */
+      height: 5px !important; /* Height for horizontal scrollbar */
+    }
+
+    /* Scrollbar thumb styles */
+    &::-webkit-scrollbar-thumb {
+      background: #00c0ff !important;
+      border-radius: 10px !important;
+    }
+
+    /* Vertical scrollbar thumb */
+    &::-webkit-scrollbar-thumb:vertical {
+      width: 5px !important;
+    }
+
+    /* Horizontal scrollbar thumb */
+    &::-webkit-scrollbar-thumb:horizontal {
+      height: 5px !important;
+    }
   }
   .h1,
   .h2,
@@ -43,8 +67,7 @@
     @apply resize-none p-[14px];
   }
   :root {
-
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
 }
 

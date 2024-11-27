@@ -25,9 +25,9 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="relative z-40">
+    <section className=" z-40">
       <div className="container mx-auto">
-        <ul className="relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[20px] -top-12 place-items-center lg:place-items-stretch">
+        <ul className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[20px] -top-12 place-items-center lg:place-items-stretch">
           {services.map((service, index) => {
             return (
               <li

@@ -32,8 +32,6 @@ const Home = () => {
       <Testimonial />
       <Contact />
       <Footer />
-      {/* temporary div */}
-      {/* <div className="h-[3000px]"></div> */}
     </>
   );
 };
