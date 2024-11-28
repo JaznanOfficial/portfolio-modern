@@ -44,8 +44,8 @@ const Hero = () => {
           <Stats />
         </div>
         {/* image */}
-        <div className="hidden xl:flex w-[55vw] h-[800px] absolute top-0 right-0 bg-accent">
-          <div className="absolute w-[558px] h-[642px] bottom-0 z-40 left-[6.5vw]">
+        <div className="hidden xl:flex w-[55vw] h-[720px] absolute top-0 right-0 bg-accent">
+          <div className="absolute w-[558px] h-[645px] -bottom-[42px] z-40 left-[6.5vw]">
             <Image
               src="/assets/hero/own.png"
               fill

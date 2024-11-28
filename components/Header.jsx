@@ -21,7 +21,7 @@ const Header = () => {
             />
             <Socials
               containerStyles="flex items-center gap-2"
-              iconStyles="text-base w-[32px] h-[32px] bg-primary text-white flex items-center justify-center rounded-full"
+              iconStyles="text-base w-[32px] h-[32px] bg-accent text-white flex items-center justify-center rounded-full"
             />
           </div>
         </div>

@@ -1,23 +1,23 @@
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaLinkedin } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
+import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaBluesky } from "react-icons/fa6";
 
 const socials = [
   {
-    icon: <RiInstagramFill />,
-    path: "",
-  },
-  {
-    icon: <FaFacebookF />,
-    path: "",
-  },
-  {
-    icon: <FaTwitter />,
-    path: "",
+    icon: <FaGithub />,
+    path: "https://github.com/JaznanOfficial",
   },
   {
     icon: <FaLinkedin />,
-    path: "",
+    path: "https://www.linkedin.com/in/jaznanofficial/",
+  },
+  {
+    icon: <FaBluesky />,
+    path: "https://bsky.app/profile/jaznanofficial.bsky.social",
+  },
+  {
+    icon: <FaFacebookF />,
+    path: "https://www.facebook.com/abdurrahman.jaznanofficial",
   },
 ];
 
@@ -26,7 +26,12 @@ const Socials = ({ containerStyles, iconStyles }) => {
     <div className={containerStyles}>
       {socials.map((item, index) => {
         return (
-          <Link href={item.path} key={index} className={iconStyles}>
+          <Link
+            href={item.path}
+            key={index}
+            target="_blank"
+            className={iconStyles}
+          >
             <span>{item.icon}</span>
           </Link>
         );
