@@ -78,17 +78,17 @@ const About = () => {
               {/* item 1 */}
               <div className="max-w-max">
                 <div className="uppercase font-bold text-primary">Location</div>
-                <p>Dhaka, Bangladesh</p>
+                <p>Khulna, Bangladesh</p>
               </div>
               {/* item 2 */}
               <div className="max-w-max">
                 <div className="uppercase font-bold text-primary">Phone</div>
-                <p>+880-123-456-789</p>
+                <p>+8801764343294 (whatsapp)</p>
               </div>
               {/* item 3 */}
               <div className="max-w-max">
                 <div className="uppercase font-bold text-primary">Email</div>
-                <p>youremail@domain.com</p>
+                <p>mail@lantabur-softech.com</p>
               </div>
               {/* item 4 */}
               <div className="max-w-max">
