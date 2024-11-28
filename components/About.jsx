@@ -44,7 +44,7 @@ const About = () => {
                   />
                 </motion.div>
                 <div className="absolute text-center text-white">
-                  <div className="text-5xl font-bold leading-none">10+</div>
+                  <div className="text-5xl font-bold leading-none">3+</div>
                   <div className="leading-none text-center">
                     Years of <br /> Experience
                   </div>
@@ -55,36 +55,47 @@ const About = () => {
           {/* text */}
           <div className="text-center xl:text-left w-full xl:w-[50%] mx-auto xl:mx-0 flex flex-col gap-6">
             <div>
-              <AnimatedText text="My Name is Noah" textStyles="h2 mb-2" />
-              <p className="text-lg">Frontend Developer & Designer</p>
+              <AnimatedText
+                text="My Name is Md Abdur Rahman"
+                textStyles="h2 mb-2"
+              />
+              <p className="text-lg">
+                Founder, Full-Stack Developer, and SaaS Entrepreneur
+              </p>
             </div>
             <p className="max-w-[680px] mx-auto xl:mx-0 mb-2">
-              I create visually stunning and functional websites using modern
-              frontend technologies and design principles. Explore my work to
-              see how I combine creativity with technical skill to deliver
-              exceptional digital experiences.
+              As a passionate founder and tech innovator, I specialize in
+              creating scalable SaaS platforms and impactful digital solutions.
+              With expertise in modern web technologies and a strong focus on
+              user-centered design, I turn complex ideas into streamlined,
+              functional applications. Explore my portfolio to see how I blend
+              technical precision with entrepreneurial vision to deliver
+              transformative products.
             </p>
+
             {/* info items */}
-            <div className="flex flex-col lg:flex-row gap-8 xl:gap-12 max-w-max mx-auto xl:mx-0 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-12 max-w-max mx-auto xl:mx-0 items-start justify-start">
               {/* item 1 */}
               <div className="max-w-max">
-                <div className="uppercase font-bold text-primary">Age</div>
-                <p>30 Years</p>
+                <div className="uppercase font-bold text-primary">Location</div>
+                <p>Dhaka, Bangladesh</p>
               </div>
               {/* item 2 */}
               <div className="max-w-max">
-                <div className="uppercase font-bold text-primary">Born in</div>
-                <p>New York, USA</p>
+                <div className="uppercase font-bold text-primary">Phone</div>
+                <p>+880-123-456-789</p>
               </div>
               {/* item 3 */}
               <div className="max-w-max">
-                <div className="uppercase font-bold text-primary">Phone</div>
-                <p>+123-456-789</p>
+                <div className="uppercase font-bold text-primary">Email</div>
+                <p>youremail@domain.com</p>
               </div>
               {/* item 4 */}
               <div className="max-w-max">
-                <div className="uppercase font-bold text-primary">Email</div>
-                <p>email@email.com</p>
+                <div className="uppercase font-bold text-primary">
+                  Languages
+                </div>
+                <p>Bengali, English, Urdu</p>
               </div>
             </div>
           </div>
