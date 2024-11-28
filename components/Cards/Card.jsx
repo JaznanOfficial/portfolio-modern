@@ -45,7 +45,7 @@ const Card = ({
                 </div>
               ) : (
                 // render the logo for experience & education
-                <div className="relative w-[300px] h-[38px] xl:h-[44px]">
+                <div className="relative w-[300px] h-[38px] xl:h-[100px]">
                   <Image src={logoUrl} fill alt="" className="object-contain" />
                 </div>
               )}

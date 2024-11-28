@@ -7,9 +7,9 @@ import Socials from "./Socials";
 
 const Header = () => {
   return (
-    <header className="w-full py-8  z-50 sticky top-0 backdrop-blur-sm bg-white/50">
+    <header className="w-full py-3  z-50 sticky top-0 backdrop-blur-sm bg-white/50">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-4 lg:justify-between">
+        <div className="flex flex-col lg:flex-row items-center gap-1 lg:gap-4 lg:justify-between">
           {/* logo */}
           <Logo />
           <div className="flex items-center gap-12">

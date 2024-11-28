@@ -3,6 +3,12 @@ import Card from "./Card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion, AnimatePresence } from "framer-motion";
 
+import LantaburImage from "../../public/assets/journey/experience/lantabur.webp";
+import innovarelImage from "../../public/assets/journey/experience/innovarel.webp";
+import skynetexImage from "../../public/assets/journey/experience/skynetex.webp";
+import lskitImage from "../../public/assets/journey/experience/lskit.webp";
+import mindCryptImage from "../../public/assets/journey/experience/imerntech.webp";
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -16,39 +22,48 @@ const journey = [
   // experience
   {
     type: "experience",
-    company: "Odeao Labs",
-    logoUrl: "/assets/journey/experience/logo-1.svg",
-    position: "Web Developer",
-    duration: "Jul 2021 - Present",
+    company: "Lantabur Softech",
+    logoUrl: LantaburImage,
+    position: "Owner & Founder",
+    duration: "Aug 2023 - Present",
     description:
-      "Built websites and web apps using Next.js, Tailwind CSS, and Javascript. Worked on scalable, user-friendly solutions.",
+      "Specialized in building SaaS platforms and custom software solutions. We target global markets, including the Middle East, Western countries, and beyond, delivering innovative and reliable software tailored to diverse business needs.We don't just build software, we empower and care your business.",
   },
   {
     type: "experience",
-    company: "Stack3d Lab",
-    logoUrl: "/assets/journey/experience/logo-2.svg",
-    position: "Frontend Developer",
-    duration: "Mar 2019 - Jun 2021",
+    company: "Innovarel",
+    logoUrl: innovarelImage,
+    position: "Lead Developer",
+    duration: "Nov 2023 - Present",
     description:
-      "Developed responsive websites with HTML, CSS, and Javascript. Ensured seamless user experiences.",
+      "Managed and mentored junior developers, fostering a collaborative environment and ensuring high-quality code standards.",
   },
   {
     type: "experience",
-    company: "Magnolia",
-    logoUrl: "/assets/journey/experience/logo-3.svg",
-    position: "UI/UX Developer",
-    duration: "Jan 2017 - Feb 2019",
+    company: "Skynetex",
+    logoUrl: skynetexImage,
+    position: "Business Development Specialist",
+    duration: "Oct 2023 - Present",
     description:
-      "Designed web iterfaces with cross-browser compatibility and responsiveness. Delivered pixel-perfect designs.",
+      "Analyzed market trends and competitor activities to shape business strategies, ensuring a competitive edge in the market.",
   },
   {
     type: "experience",
-    company: "Warpspeed Inc.",
-    logoUrl: "/assets/journey/experience/logo-4.svg",
+    company: "LSKIT",
+    logoUrl: lskitImage,
     position: "Full Stack Developer",
-    duration: "Aug 2015 - Dec 2016",
+    duration: "Jun 2023 - July 2023",
     description:
-      "Developed full-stack solutions using React and Node.js. Integrated frontend and backend technologies.",
+      "Developed full-stack solutions using React,Next and Node.js. Integrated frontend and backend technologies.",
+  },
+  {
+    type: "experience",
+    company: "MindCrypt",
+    logoUrl: mindCryptImage,
+    position: "Full Stack Developer",
+    duration: "Sep 2022 - Dec 2022",
+    description:
+      "Developed full-stack solutions using React,Next and Node.js. Integrated frontend and backend technologies.",
   },
   // education
   {
