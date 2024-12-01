@@ -9,14 +9,27 @@ import skynetexImage from "../../public/assets/journey/experience/skynetex.webp"
 import lskitImage from "../../public/assets/journey/experience/lskit.webp";
 import mindCryptImage from "../../public/assets/journey/experience/imerntech.webp";
 
+import { FaJs, FaPython, FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaWordpress,
-  FaFigma,
-} from "react-icons/fa";
+  SiTypescript,
+  SiNextdotjs,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+  SiMui,
+  SiPrisma,
+  SiPostgresql,
+  SiSanity,
+  SiStripe,
+  SiFigma,
+  SiPayloadcms,
+  SiStrapi,
+  SiPaddle,
+  SiSquare,
+  SiMongoose,
+  SiShadcnui,
+  SiLemonsqueezy,
+} from "react-icons/si";
 
 const journey = [
   // experience
@@ -66,90 +79,210 @@ const journey = [
       "Developed full-stack solutions using React,Next and Node.js. Integrated frontend and backend technologies.",
   },
   // education
-  {
-    type: "education",
-    institution: "Udemy",
-    logoUrl: "/assets/journey/education/logo-1.svg",
-    qualification: "Web Development Bootcamp",
-    duration: "Jan 2020 - Apr 2020",
-    description:
-      "Learned full-stack development concepts, focusing on React, Node.js, and APIs. Completed hands-on projects to solidify skills.",
-  },
-  {
-    type: "education",
-    institution: "CodeAcademy Bootcamp",
-    logoUrl: "/assets/journey/education/logo-2.svg",
-    qualification: "Full Stack Dev Cert",
-    duration: "Jan 2020 - May 2020",
-    description:
-      "Gained experience in frontend and backend technologies, including React, Node.js, and databases.",
-  },
-  {
-    type: "education",
-    institution: "Design Intitute",
-    logoUrl: "/assets/journey/education/institution.svg",
-    qualification: "UI/UX Diploma",
-    duration: "Aug 2018 - Dec 2018",
-    description:
-      "Studied advanced principles of user interface and user experience design. Developed skills in prototyping, wireframing, and usability testing.",
-  },
-  {
-    type: "education",
-    institution: "Business School",
-    logoUrl: "/assets/journey/education/institution.svg",
-    qualification: "Project Management Cert",
-    duration: "Mar 2021 - Jun 2021",
-    description:
-      "Completed certification in project management, focusing on Agile methodologies and effective team collaboration.",
-  },
+  // {
+  //   type: "education",
+  //   institution: "Udemy",
+  //   logoUrl: "/assets/journey/education/logo-1.svg",
+  //   qualification: "Web Development Bootcamp",
+  //   duration: "Jan 2020 - Apr 2020",
+  //   description:
+  //     "Learned full-stack development concepts, focusing on React, Node.js, and APIs. Completed hands-on projects to solidify skills.",
+  // },
+  // {
+  //   type: "education",
+  //   institution: "CodeAcademy Bootcamp",
+  //   logoUrl: "/assets/journey/education/logo-2.svg",
+  //   qualification: "Full Stack Dev Cert",
+  //   duration: "Jan 2020 - May 2020",
+  //   description:
+  //     "Gained experience in frontend and backend technologies, including React, Node.js, and databases.",
+  // },
+  // {
+  //   type: "education",
+  //   institution: "Design Intitute",
+  //   logoUrl: "/assets/journey/education/institution.svg",
+  //   qualification: "UI/UX Diploma",
+  //   duration: "Aug 2018 - Dec 2018",
+  //   description:
+  //     "Studied advanced principles of user interface and user experience design. Developed skills in prototyping, wireframing, and usability testing.",
+  // },
+  // {
+  //   type: "education",
+  //   institution: "Business School",
+  //   logoUrl: "/assets/journey/education/institution.svg",
+  //   qualification: "Project Management Cert",
+  //   duration: "Mar 2021 - Jun 2021",
+  //   description:
+  //     "Completed certification in project management, focusing on Agile methodologies and effective team collaboration.",
+  // },
   // skills
   {
     type: "skill",
-    name: "HTML",
-    icon: <FaHtml5 />,
-    duration: "Learned in 2015",
-    description:
-      "Crafted structured web content using HTML effectively for modern websites, ensuring semanting marckup and accessibility.",
-  },
-  {
-    type: "skill",
-    name: "CSS",
-    icon: <FaCss3Alt />,
-    duration: "Learned in 2015",
-    description:
-      "Styled responsive web pages using CSS, ensuring an appealing user experience with modern design principles and layouts.",
-  },
-  {
-    type: "skill",
-    name: "Javascript",
+    name: "JavaScript",
     icon: <FaJs />,
-    duration: "Learned in 2016",
+    duration: "Learned in 2022",
     description:
-      "Implemented Javascript for interactivity, enhancing user engagement on websites through dynamic content and features.",
+      "Implemented interactive and dynamic features for websites using JavaScript, enhancing user experience.",
+  },
+  {
+    type: "skill",
+    name: "TypeScript",
+    icon: <SiTypescript />,
+    duration: "Learned in 2022",
+    description:
+      "Leveraged TypeScript for type-safe JavaScript applications, improving code maintainability and robustness.",
+  },
+  {
+    type: "skill",
+    name: "Python",
+    icon: <FaPython />,
+    duration: "Learned in 2024",
+    description:
+      "Used Python for backend services, scripting, and automation tasks.",
+  },
+  {
+    type: "skill",
+    name: "Next.js",
+    icon: <SiNextdotjs />,
+    duration: "Learned in 2022",
+    description:
+      "Developed server-rendered and static web applications using Next.js, ensuring performance optimization.",
   },
   {
     type: "skill",
     name: "React.js",
     icon: <FaReact />,
-    duration: "Learned in 2018",
+    duration: "Learned in 2022",
     description:
-      "Built dynamic user interfaces using React.js, optimizing component-driven design for seamless user experiences and efficiency.",
+      "Built component-driven UIs with React.js for seamless and scalable frontend applications.",
   },
   {
     type: "skill",
-    name: "WordPress",
-    icon: <FaWordpress />,
-    duration: "Learned in 2020",
+    name: "Node.js",
+    icon: <FaNodeJs />,
+    duration: "Learned in 2022",
     description:
-      "Developed dynamic websites with WordPress, simplifying content management processes while ensuring scalability and performance.",
+      "Developed server-side applications using Node.js for scalable backend systems.",
   },
   {
     type: "skill",
-    name: "HTML",
-    icon: <FaFigma />,
-    duration: "Learned in 2018",
+    name: "Express.js",
+    icon: <SiExpress />,
+    duration: "Learned in 2022",
     description:
-      "Designed user interfaces in Figma, facilitating collaboration and rapid prototyping to meet user needs and project goals.",
+      "Built RESTful APIs and web applications with Express.js, ensuring fast and lightweight backend solutions.",
+  },
+  {
+    type: "skill",
+    name: "Mongoose",
+    icon: <SiMongoose />,
+    duration: "Learned in 2022",
+    description:
+      "Designed and managed MongoDB schemas using Mongoose for efficient database operations.",
+  },
+  {
+    type: "skill",
+    name: "MongoDB",
+    icon: <SiMongodb />,
+    duration: "Learned in 2022",
+    description:
+      "Implemented NoSQL databases with MongoDB for flexible and scalable data storage.",
+  },
+  {
+    type: "skill",
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss />,
+    duration: "Learned in 2022",
+    description:
+      "Styled responsive and modern web interfaces using Tailwind CSS for rapid development.",
+  },
+  {
+    type: "skill",
+    name: "Material UI",
+    icon: <SiMui />,
+    duration: "Learned in 2022",
+    description:
+      "Utilized Material UI for building consistent and visually appealing user interfaces.",
+  },
+  {
+    type: "skill",
+    name: "Shadcn",
+    icon: <SiShadcnui />,
+    duration: "Learned in 2023",
+    description:
+      "Utilized ShadCN to create reusable and accessible UI components with a focus on simplicity and design consistency, enhancing the user interface development experience in modern web applications.",
+  },
+  {
+    type: "skill",
+    name: "Prisma ORM",
+    icon: <SiPrisma />,
+    duration: "Learned in 2022",
+    description:
+      "Simplified database management and queries with Prisma ORM for SQL databases.",
+  },
+  {
+    type: "skill",
+    name: "PostgreSQL",
+    icon: <SiPostgresql />,
+    duration: "Learned in 2022",
+    description:
+      "Managed relational databases effectively using PostgreSQL for data consistency and integrity.",
+  },
+  {
+    type: "skill",
+    name: "Sanity CMS",
+    icon: <SiSanity />,
+    duration: "Learned in 2022",
+    description:
+      "Integrated Sanity CMS for creating structured and customizable content management systems.",
+  },
+  {
+    type: "skill",
+    name: "Payload CMS",
+    icon: <SiPayloadcms />,
+    duration: "Learned in 2022",
+    description:
+      "Implemented Payload CMS for flexible and scalable content management solutions.",
+  },
+  {
+    type: "skill",
+    name: "Strapi CMS",
+    icon: <SiStrapi />,
+    duration: "Learned in 2022",
+    description:
+      "Built robust and flexible APIs using Strapi for content-rich applications.",
+  },
+  {
+    type: "skill",
+    name: "Stripe Payment",
+    icon: <SiStripe />,
+    duration: "Learned in 2022",
+    description:
+      "Integrated Stripe for secure and seamless payment processing in web applications.",
+  },
+  {
+    type: "skill",
+    name: "LemonSqueezy Payment",
+    icon: <SiLemonsqueezy />,
+    duration: "Learned in 2022",
+    description:
+      "Used LemonSqueezy for managing subscriptions and payment processes.",
+  },
+  {
+    type: "skill",
+    name: "Paddle Payment",
+    icon: <SiPaddle />,
+    duration: "Learned in 2022",
+    description:
+      "Integrated Paddle for SaaS subscription billing and payment solutions.",
+  },
+  {
+    type: "skill",
+    name: "SquareUp Payment",
+    icon: <SiSquare />,
+    duration: "Learned in 2024",
+    description:
+      "Utilized SquareUp for seamless payment processing and management in applications.",
   },
 ];
 
@@ -162,7 +295,7 @@ const Cards = () => {
       >
         <TabsList className="max-w-max mb-[30px]">
           <TabsTrigger value="experience">Experience</TabsTrigger>
-          <TabsTrigger value="education">Education</TabsTrigger>
+          {/* <TabsTrigger value="education">Education</TabsTrigger> */}
           <TabsTrigger value="skills">My Skills</TabsTrigger>
         </TabsList>
         <TabsContent value="experience" className="w-full">
