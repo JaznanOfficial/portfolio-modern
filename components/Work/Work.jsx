@@ -19,7 +19,7 @@ const Work = () => {
 
     try {
       const limit = 6; // Number of items to fetch per request
-      const query = `*[_type=="Projects"]|order(serial asc)[0...${visibleItems}]{
+      const query = `*[_type=="Projects"]|order(serial desc)[0...${visibleItems}]{
         _id,
         name,
         description,
