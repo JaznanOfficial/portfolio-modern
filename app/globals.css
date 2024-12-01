@@ -74,3 +74,18 @@
 .active {
   @apply text-accent transition-all duration-200;
 }
+
+.bg-animation {
+  background-size: cover;
+  background-position: center top;
+  transition: background-position 3s ease-in-out; /* Smooth animation */
+}
+
+.bg-animation:hover {
+  background-position: center bottom; /* Scrolls to bottom */
+}
+
+/* Ensure the overlay does not block hover events */
+.overlay {
+  pointer-events: none; /* Allows hover events to pass through */
+}
