@@ -1,59 +1,73 @@
-import { useState, useEffect } from "react";
-// form spree
-import { useForm, ValidationError } from "@formspree/react";
+import { useState } from "react";
 import AnimatedText from "./AnimatedText";
 import Image from "next/image";
 import { FaCheckCircle } from "react-icons/fa";
+import axios from "axios";
+import { z } from "zod";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+// Define Zod schema for form validation
+const contactSchema = z.object({
+  firstName: z.string().min(1, "First Name is required"),
+  lastName: z.string().min(1, "Last Name is required"),
+  email: z.string().email("Invalid email format").min(1, "Email is required"),
+  phone: z.string().optional(),
+  message: z.string().min(1, "Message is required"),
+});
 
 const Contact = () => {
-  // add your formspree key
-  const [state, handleSubmit] = useForm("add your key here..");
-
-  // state for form inputs
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     message: "",
   });
 
-  // state to control icon visibility and button text
   const [showIcon, setShowIcon] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  // handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // clear the form after submission and handle message visibility
-  useEffect(() => {
-    if (state.succeeded) {
-      setShowIcon(true); // show the success icon
-      // clear for inputs
-      setFormData({
-        firstname: "",
-        lastname: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-      // hide the icon and revert button text after 3 seconds
-      const timer = setTimeout(() => {
-        setShowIcon(false);
-      }, 3000);
-
-      // clean up the timer on component unmount or before re-running effect
-      return () => clearTimeout(timer);
+    // Validate form data
+    const validationResult = contactSchema.safeParse(formData);
+    if (!validationResult.success) {
+      validationResult.error.errors.forEach((err) => toast.error(err.message));
+      return;
     }
-  }, [state.succeeded]);
 
-  // handle form submission
-  const handleFormSubmit = (e) => {
-    e.preventDefault(); // prevent default form submission
-    handleSubmit(formData); // call formspree's submit handler with formData
+    setLoading(true); // Set loading to true when submission starts
+    try {
+      const response = await axios.post("/api/email-send", formData);
+      if (response.status === 200) {
+        toast.success("Message sent successfully!");
+        setShowIcon(true);
+
+        // Clear form data
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+
+        // Hide icon after 3 seconds
+        setTimeout(() => setShowIcon(false), 3000);
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error(error.response?.data?.error || "Something went wrong!");
+    } finally {
+      setLoading(false); // Reset loading to false after submission ends
+    }
   };
 
   return (
@@ -65,17 +79,14 @@ const Contact = () => {
               text="Let's Work Together"
               textStyles="h2 mb-12 text-center xl:text-left"
             />
-            {/* form */}
             <form
-              onSubmit={handleFormSubmit}
+              onSubmit={handleSubmit}
               className="flex flex-col gap-6 w-full max-w-[480px]"
             >
-              {/* firstname & lastname fields */}
               <div className="flex gap-8">
-                {/* firstname */}
                 <div className="flex-1">
                   <label
-                    htmlFor="firstname"
+                    htmlFor="firstName"
                     className="block mb-2 text-sm font-medium text-primary"
                   >
                     First Name <span className="text-accent">*</span>
@@ -83,18 +94,17 @@ const Contact = () => {
                   <input
                     onChange={handleChange}
                     type="text"
-                    id="firstname"
-                    name="firstname"
-                    value={formData.firstname}
+                    id="firstName"
+                    name="firstName"
+                    value={formData.firstName}
                     className="input"
                     placeholder="First Name"
                     required
                   />
                 </div>
-                {/* lastname */}
                 <div className="flex-1">
                   <label
-                    htmlFor="lastname"
+                    htmlFor="lastName"
                     className="block mb-2 text-sm font-medium text-primary"
                   >
                     Last Name <span className="text-accent">*</span>
@@ -102,16 +112,15 @@ const Contact = () => {
                   <input
                     onChange={handleChange}
                     type="text"
-                    id="lastname"
-                    name="lastname"
-                    value={formData.lastname}
+                    id="lastName"
+                    name="lastName"
+                    value={formData.lastName}
                     className="input"
                     placeholder="Last Name"
                     required
                   />
                 </div>
               </div>
-              {/* email field */}
               <div>
                 <label
                   htmlFor="email"
@@ -129,13 +138,7 @@ const Contact = () => {
                   placeholder="youremail@email.com"
                   required
                 />
-                <ValidationError
-                  prefix="Email"
-                  field="email"
-                  errors={state.errors}
-                />
               </div>
-              {/* phone field */}
               <div>
                 <label
                   htmlFor="phone"
@@ -153,7 +156,6 @@ const Contact = () => {
                   placeholder="+1 (555) 000-0000"
                 />
               </div>
-              {/* message field */}
               <div>
                 <label
                   htmlFor="message"
@@ -171,42 +173,22 @@ const Contact = () => {
                   rows="5"
                   required
                 />
-                <ValidationError
-                  prefix="Message"
-                  field="message"
-                  errors={state.errors}
-                />
               </div>
-              {/* submit button */}
               <button
                 type="submit"
-                disabled={state.submitting}
                 className="btn btn-accent flex items-center justify-center gap-2"
+                disabled={loading} // Disable button during loading
               >
-                {state.submitting ? (
-                  <span>Sending...</span>
+                {loading ? (
+                  <span>Sending...</span> // Show loading text
+                ) : showIcon ? (
+                  <FaCheckCircle className="text-white text-lg" />
                 ) : (
-                  <>
-                    {/* show icon with opacity transition */}
-                    <FaCheckCircle
-                      className={`absolute text-white text-lg transition-opacity duration-500 ease-in-out ${
-                        showIcon ? "opacity-100" : "opacity-0"
-                      }`}
-                    />
-                    {/* button text */}
-                    <span
-                      className={`transition-opacity duration-500 ease-in-out ${
-                        showIcon ? "opacity-0" : "opacity-100"
-                      }`}
-                    >
-                      Send message
-                    </span>
-                  </>
+                  "Send message"
                 )}
               </button>
             </form>
           </div>
-          {/* image */}
           <div className="hidden xl:flex relative w-[577px] h-[664px] rounded-lg overflow-hidden">
             <Image
               src="/assets/contact/img.png"

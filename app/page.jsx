@@ -29,7 +29,7 @@ const Home = () => {
       <About />
       <Journey />
       <Work />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <Contact />
       <Footer />
     </>

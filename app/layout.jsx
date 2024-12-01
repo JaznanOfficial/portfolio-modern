@@ -2,6 +2,7 @@ import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import ScrollToTopButton from "@/components/ScrollToTop";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <body className={`antialiased ${inter.variable} ${bebasNeue.variable}`}>
         <Header />
         {children}
+        <ToastContainer />
         <ScrollToTopButton />
       </body>
     </html>
