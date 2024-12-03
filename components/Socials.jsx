@@ -13,7 +13,7 @@ const socials = [
   },
   {
     icon: <FaBluesky />,
-    path: "https://bsky.app/profile/jaznanofficial.bsky.social",
+    path: "https://bsky.app/profile/founder.lantabur-softech.com",
   },
   {
     icon: <FaFacebookF />,
