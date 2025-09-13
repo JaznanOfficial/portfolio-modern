@@ -32,7 +32,7 @@ const Work = () => {
       }`;
 
       const response = await axios.get(
-        `https://flp2icrq.api.sanity.io/v2024-02-22/data/query/production/?query=${query}`
+        `https://lthzwpd0.api.sanity.io/v2024-02-22/data/query/production/?query=${query}`
       );
 
       const newProjects = response.data.result;
